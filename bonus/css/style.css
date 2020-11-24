@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.carousel_container {
+    margin: 0 auto;
+    position: relative
+}
+
+img {
+    width: 100%;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.previous,
+.next {
+    position: absolute;
+    font-size: 60px;
+    color: #fff;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.previous:hover,
+.next:hover {
+    opacity: 1;
+}
+.previous {
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.next {
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}
