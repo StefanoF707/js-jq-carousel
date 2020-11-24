@@ -8,6 +8,7 @@ $(document).ready(
         var previous = $(".prev");
         var next = $(".next");
         var circle = $(".fas.fa-circle");
+        var image = $(".images > img");
 
         previous.click(
             function() {
@@ -24,7 +25,6 @@ $(document).ready(
         circle.click(
             function () {
                 var indexCircleSelected = $(this).index();
-                var image = $(".images > img");
                 var activeImage = $(".images > .active");
 
                 circle.removeClass("active");
