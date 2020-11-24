@@ -7,6 +7,7 @@ $(document).ready(
 
         var previous = $(".prev");
         var next = $(".next");
+        var circle = $(".fas.fa-circle");
 
         previous.click(
             function() {
@@ -17,6 +18,20 @@ $(document).ready(
         next.click(
             function() {
                 nextImage();
+            }
+        );
+
+        circle.click(
+            function () {
+                var indexCircleSelected = $(this).index();
+                var image = $(".images > img");
+                var activeImage = $(".images > .active");
+
+                circle.removeClass("active");
+                $(this).addClass("active");
+
+                activeImage.removeClass("active");
+                $(image[indexCircleSelected]).addClass("active");
             }
         );
 
@@ -33,6 +48,7 @@ $(document).ready(
     }
 );
 
+//----------------------------------------------------------------------------------------
 
 function nextImage() {
     var activeImage = $(".images > .active");
